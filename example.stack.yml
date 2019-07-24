@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  scraper:
+    image: hub.voidcloud.de/friedpotato/qis-scraper:latest
+    volumes:
+      - /dockerdata/qis/data.json:/data.json
+    environment:
+      INTERVAL: "3600" # 3600 seconds => 1 hour
+      CHAT_ID: "42424242"
+      QIS_USER: "mustermann"
+      DEGREE: "Abschluss 90 Master"
+      STUDY_PROGRAM: "Applied Computer Science"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: 256M
+      restart_policy:
+        condition: any
