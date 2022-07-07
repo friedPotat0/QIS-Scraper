@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "puppeteer": "^1.13.0",
     "telegraf": "^3.27.1"
   }
